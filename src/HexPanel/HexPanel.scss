@@ -1,0 +1,14 @@
+.hex-panel {
+    color: white;
+    display:flex;
+    justify-content:center;
+
+    .hex-row {
+        .hex-tile {
+            background-color: black;
+            margin:1px;
+            width:50px;
+            height:50px;
+        }
+    }
+}
