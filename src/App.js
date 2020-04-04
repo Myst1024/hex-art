@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HexPanel from './HexPanel/HexPanel'
+import Palette from './Palette/Palette'
 import './App.scss';
 
-function App() {
+const App = () => {
+  const [currentColor, setCurrentColor] = useState(1);
+  const colorTable = ["transparent", "#000000", "#5d5d5d", "#0c24ce", "#ffffff"];
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Wall <span role='img' aria-label="art">🎨</span> Generator
         </p>
       </header>
-      <HexPanel />
+      <Palette colorTable={colorTable} currentColor={currentColor} setCurrentColor={setCurrentColor}/>
+      <HexPanel colorTable={colorTable} currentColor={currentColor}/>
     </div>
   );
 }

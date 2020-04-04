@@ -1,14 +1,37 @@
+$scale: 30px;
+
 .hex-panel {
-    color: white;
-    display:flex;
-    justify-content:center;
+    width: auto;
+    margin: 0 auto;
 
     .hex-row {
-        .hex-tile {
-            background-color: black;
-            margin:1px;
-            width:50px;
-            height:50px;
+        clear: left;
+
+        &:nth-child(even){
+            margin-left: $scale + 1;
         }
+        .hex-tile {
+            float:left;
+            margin-left: 3px;
+            margin-bottom: $scale / -2;
+            .top {
+                width: 0;
+                border-bottom: $scale * 30 / 52 solid #6C6;
+                border-left: $scale solid transparent;
+                border-right: $scale solid transparent;
+            }
+            .middle {
+                width: $scale * 2;
+                height: $scale * 30 / 26;
+                background: #6C6;
+            }
+            .bottom {
+                width: 0;
+                border-top: $scale * 30 / 52 solid #6C6;
+                border-left: $scale solid transparent;
+                border-right: $scale solid transparent;
+            }
+        }
+
     }
 }
