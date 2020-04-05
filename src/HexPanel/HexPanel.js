@@ -3,7 +3,7 @@ import HexRow from './HexRow';
 import './HexPanel.scss';
 
 const HexPanel = ({ currentColor, colorTable }) => {
-    const GRID_SIZE = 10;
+    const GRID_SIZE = 12;
     
     const [hexGrid, setHexGrid] = useState(Array.from({length: GRID_SIZE},()=> Array.from({length: GRID_SIZE}, () => currentColor)));
 
